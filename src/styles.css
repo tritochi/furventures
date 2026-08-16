@@ -1,0 +1,264 @@
+:root {
+  /* furventures design tokens (design.md) */
+  --color-bg: #faf9f7;          /* off-white, light and airy */
+  --color-surface: #ffffff;
+  --color-text: #241d19;        /* near-black warm text */
+  --color-text-muted: #5b514a;
+  --color-accent: #b3402f;      /* deep terracotta, used sparingly */
+  --color-accent-dark: #97372a;
+  --color-border: #e5dfd8;
+  --color-support: #f3ede6;     /* muted warm support tone */
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow-soft: 0 1px 2px rgba(30, 20, 15, 0.06);
+  --max-width: 1080px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;              /* 16px+, readable */
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+/* Visible focus states (accessibility) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.site-header .brand {
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+.site-nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  padding: 0.5rem 0.25rem;
+}
+
+.site-nav a:hover {
+  color: var(--color-accent);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  min-height: 48px;             /* >= 44px tap target */
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-dark);
+}
+
+/* Hero (first screen) */
+.hero {
+  text-align: center;
+  padding: 5.5rem 1.5rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+}
+
+.hero-intro {
+  max-width: 40rem;
+  margin: 0 auto 1.75rem;
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+}
+
+/* Sections */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.section h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.section-body > p {
+  max-width: 52rem;
+  color: var(--color-text-muted);
+}
+
+/* Portfolio grid: mobile-first 1 column */
+.portfolio-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.card-description {
+  flex: 1;
+  margin: 0 0 1rem;
+  color: var(--color-text-muted);
+}
+
+.chip {
+  align-self: flex-start;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: var(--color-support);
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Footer / Contact */
+.footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 5rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 480px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  min-height: 48px;             /* >= 44px tap target */
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form .btn-primary {
+  width: 100%;
+}
+
+.contact-success {
+  max-width: 480px;
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-support);
+  text-align: center;
+}
+
+.contact-success h3 {
+  margin: 0 0 0.5rem;
+}
+
+.footer-note {
+  margin-top: 3rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
