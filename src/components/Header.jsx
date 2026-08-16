@@ -1,8 +1,11 @@
+import PawMark from './PawMark.jsx'
+
 function Header() {
   return (
     <header className="site-header">
       <a href="#top" className="brand">
-        furventures
+        <PawMark size={24} />
+        <span>furventures</span>
       </a>
       <nav className="site-nav" aria-label="Primary">
         <a href="#about">About</a>

@@ -5,9 +5,9 @@
 - Name: furventures
 - Build shape: Content-led site
 - Shape confirmation: Confirmed
-- Current KDBM Lite stage: Build
-- Current phase: Ready to Build
-- Current work card: `work-cards/06-github-vercel-proof.md`
+- Current KDBM Lite stage: Shipped
+- Current phase: Shipped
+- Current work card: None — all work cards complete
 
 ## Completed work cards
 
@@ -17,6 +17,8 @@
 - [x] 03 Core Behaviour
 - [x] 04 Footer and Contact Form
 - [x] 05 Styles, Responsive, and Review Pass
+- [x] 06 GitHub and Vercel Proof
+- [x] 07 Content & Visual Enhancement
 
 ## Completed phases
 
@@ -33,7 +35,8 @@
 - [x] 03 Core Behaviour
 - [x] 04 Footer and Contact Form (Save or Polish)
 - [x] 05 Styles, Responsive, and Review Pass
-- [ ] 06 GitHub and Vercel Proof
+- [x] 06 GitHub and Vercel Proof
+- [x] 07 Content & Visual Enhancement
 
 ## Blockers
 
@@ -42,8 +45,10 @@
 ## Decisions made
 
 - Project name: furventures
-- Build type: Portfolio site for an F&B business
+- Build type: Portfolio site for a furry-convention-focused F&B business
 - Build shape: Content-led site (confirmed)
+- Direction (2026): furry-convention-focused F&B; placeholder content/contact added; themed visuals planned
+- Placeholder contact: hello@furventures.example and +60 12-345 6789, labelled "Placeholder"
 - Proof target: Responsive one-page portfolio site deployed on Vercel
 - Stack: Vite 7 + React + plain CSS (fixed from forced v8 upgrade via `npm audit fix --force` — v8 is incompatible with @vitejs/plugin-react)
 - Structure: One-page, 5 sections (Header/Hero/About/Portfolio/Footer)
@@ -66,11 +71,16 @@
 - Vercel account: Checked — signed up and logged in with GitHub
 - KrackedDevs account: Checked — signed up and logged in
 - Browser: Checked — available for localhost tests
-- Localhost: Working — `npm run dev` serves the furventures scaffold at http://localhost:5173 (HTTP 200)
-- Build: Work Card 05 complete — full design system, responsive mobile-first layout, accessibility basics applied; Review Mirror PASS
+- Localhost: Working — `npm run dev` serves the site locally at http://localhost:5173
+- Build: Shipped — all 7 work cards complete; live at https://furventures.vercel.app
+
+## Proof
+
+- Live URL: https://furventures.vercel.app (verified: HTTP 200, serving furventures page)
+- GitHub repository: https://github.com/tritochi/furventures
+- Proof used: Strong — live Vercel URL + GitHub URL + deployed site explanation.
+- Work Card 07 (content & visual enhancement): committed and pushed so Vercel auto-redeploys.
 
 ## Next instruction for AI
 
-Read `build-status.md`, `build-blueprint.md`, and `work-cards/06-github-vercel-proof.md`. Implement only Work Card 06. Stop after verification and update `build-status.md`.
-
-Planning is complete. Do not implement the next Work Card until the learner explicitly approves it.
+All planning and build work cards are complete and the site is Shipped. Furventures is live at https://furventures.vercel.app and the source is at https://github.com/tritochi/furventures. Work Card 07 (furry-convention content & visual enhancement) is included. No further implementation is pending without learner request.

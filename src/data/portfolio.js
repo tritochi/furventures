@@ -1,29 +1,33 @@
-// furventures portfolio sample items.
+// furventures portfolio sample items — furry-convention F&B theme.
 // These are clearly-labelled SAMPLE entries for furventures' own F&B work,
 // not invented client testimonials or real-world claimed results.
 export const portfolio = [
   {
-    title: 'Artisan Café Concept',
+    title: 'Con Café Pop-Up',
+    emoji: '☕',
     description:
-      'A sample café brand concept exploring a warm, modern space with a focused all-day menu.',
+      'A sample themed café booth serving quick coffee and light bites through busy convention mornings.',
     sample: true,
   },
   {
-    title: 'Weekend Pop-Up Kitchen',
+    title: 'Fursuit-Friendly Snack Line',
+    emoji: '🍩',
     description:
-      'A sample pop-up event format built around seasonal ingredients and a compact street-food menu.',
+      'A sample grab-and-go snack line built for long con days — easy to eat between panels and meetups.',
     sample: true,
   },
   {
-    title: 'F&B Brand Identity',
+    title: 'Con Food Court Stall',
+    emoji: '🥟',
     description:
-      'A sample visual identity direction for a small food business: logo, colors, and packaging feel.',
+      'A sample convention food-stall layout focused on fast turnaround, clear queues, and warm comfort food.',
     sample: true,
   },
   {
-    title: 'Catering & Events Package',
+    title: 'Afterparty & Meetup Catering',
+    emoji: '🎉',
     description:
-      'A sample catering package outline covering menu tiers, serving setup, and event staffing basics.',
+      'A sample catering package for afterparties and community meetups — snack trays, buffets, and more.',
     sample: true,
   },
 ]

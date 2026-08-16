@@ -60,6 +60,9 @@ textarea:focus-visible {
 }
 
 .site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-weight: 800;
   font-size: 1.15rem;
   text-decoration: none;
@@ -124,6 +127,32 @@ textarea:focus-visible {
   color: var(--color-text-muted);
 }
 
+.hero-mark {
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.hero-flair {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto 1.75rem;
+  max-width: 40rem;
+}
+
+.hero-flair li {
+  background: var(--color-support);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
 /* Sections */
 .section {
   max-width: var(--max-width);
@@ -141,6 +170,25 @@ textarea:focus-visible {
 .section-body > p {
   max-width: 52rem;
   color: var(--color-text-muted);
+}
+
+.about h3 {
+  margin: 1.75rem 0 0.4rem;
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+.about-list {
+  padding-left: 1.25rem;
+}
+
+.about-list li {
+  margin-bottom: 0.4rem;
+}
+
+.honest-note {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
 }
 
 /* Portfolio grid: mobile-first 1 column */
@@ -186,6 +234,12 @@ textarea:focus-visible {
   flex: 1;
   margin: 0 0 1rem;
   color: var(--color-text-muted);
+}
+
+.card-visual {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
 }
 
 .chip {
@@ -255,6 +309,22 @@ textarea:focus-visible {
 
 .contact-success h3 {
   margin: 0 0 0.5rem;
+}
+
+.contact-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-width: 480px;
+  margin: 1.5rem auto 0;
+  font-style: normal;
+  color: var(--color-text-muted);
+}
+
+.placeholder-note {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
 }
 
 .footer-note {
