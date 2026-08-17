@@ -5,6 +5,7 @@ import FursuitFriendly from './components/FursuitFriendly.jsx'
 import FeaturedTreats from './components/FeaturedTreats.jsx'
 import Gallery from './components/Gallery.jsx'
 import Portfolio from './components/Portfolio.jsx'
+import Pack from './components/Pack.jsx'
 import EventPartners from './components/EventPartners.jsx'
 import Faq from './components/Faq.jsx'
 import Footer from './components/Footer.jsx'
@@ -20,6 +21,7 @@ function App() {
         <FeaturedTreats />
         <Gallery />
         <Portfolio />
+        <Pack />
         <EventPartners />
         <Faq />
       </main>
