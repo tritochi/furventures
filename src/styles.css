@@ -8,6 +8,7 @@
   --color-accent-dark: #833f1f;
   --color-accent-2: #c08a3e;    /* caramel gold */
   --color-accent-3: #b15f52;    /* dusty rose / paw-pad pink */
+  --color-accent-4: #5f8f8a;    /* mossy teal */
   --color-ink: #3a2b20;         /* dark espresso for footer band */
   --color-border: #e7dccd;
   --color-support: #f4ead9;     /* warm sand */
@@ -123,6 +124,8 @@ textarea:focus-visible {
 
 /* Hero (first screen) */
 .hero {
+  position: relative;
+  overflow: hidden;
   text-align: center;
   padding: 5.5rem 1.5rem 6rem;
   background:
@@ -771,6 +774,241 @@ html::-webkit-scrollbar-thumb {
   background: var(--color-accent);
   border-radius: 999px;
   border: 3px solid var(--color-support);
+}
+
+/* ---- Multicolor furry title ---- */
+.fur-title {
+  display: inline-block;
+}
+
+.fur-title span {
+  display: inline-block;
+  font-weight: 800;
+}
+
+.fur-title span:nth-child(4n + 1) {
+  color: #8f4120; /* deep rust */
+}
+
+.fur-title span:nth-child(4n + 2) {
+  color: #965e15; /* deep caramel */
+}
+
+.fur-title span:nth-child(4n + 3) {
+  color: #a04a40; /* deep rose */
+}
+
+.fur-title span:nth-child(4n) {
+  color: #3f6e68; /* deep teal */
+}
+
+/* ---- Floating paw prints in hero ---- */
+.hero-floats {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-floats svg {
+  position: absolute;
+  color: rgba(156, 75, 38, 0.25);
+}
+
+.float-a {
+  left: 8%;
+  top: 16%;
+}
+
+.float-b {
+  right: 10%;
+  top: 32%;
+  color: rgba(95, 143, 138, 0.25);
+}
+
+.float-c {
+  left: 18%;
+  bottom: 14%;
+  color: rgba(177, 95, 82, 0.22);
+}
+
+/* ---- Animated bits (guarded by reduced-motion) ---- */
+@media (prefers-reduced-motion: no-preference) {
+  .fur-title span {
+    animation:
+      fur-rise 0.55s ease-out both,
+      fur-wiggle 2.6s ease-in-out infinite;
+    animation-delay:
+      calc(var(--i) * 40ms),
+      calc(0.9s + var(--i) * 30ms);
+  }
+
+  .paw-trail svg {
+    animation: fur-pawpop 0.45s ease-out both;
+  }
+
+  .paw-trail svg:nth-child(2) {
+    animation-delay: 0.08s;
+  }
+
+  .paw-trail svg:nth-child(3) {
+    animation-delay: 0.16s;
+  }
+
+  .paw-trail svg:nth-child(4) {
+    animation-delay: 0.24s;
+  }
+
+  .paw-trail svg:nth-child(5) {
+    animation-delay: 0.32s;
+  }
+
+  .paw-trail-footer svg:nth-child(2) {
+    animation-delay: 0.08s;
+  }
+
+  .paw-trail-footer svg:nth-child(3) {
+    animation-delay: 0.16s;
+  }
+
+  .paw-trail-footer svg:nth-child(4) {
+    animation-delay: 0.24s;
+  }
+
+  .paw-trail-footer svg:nth-child(5) {
+    animation-delay: 0.32s;
+  }
+
+  .hero-floats svg {
+    animation: fur-drift 7s ease-in-out infinite;
+  }
+
+  .float-b {
+    animation-delay: -3s;
+  }
+
+  .float-c {
+    animation-delay: -5s;
+  }
+
+  .treat-emoji,
+  .event-emoji,
+  .gallery-emoji,
+  .pack-avatar > span {
+    display: inline-block;
+    animation: fur-bob 3.2s ease-in-out infinite;
+  }
+
+  .treat-card:nth-child(2) .treat-emoji,
+  .event-step:nth-child(2) .event-emoji,
+  .gallery-tile:nth-child(2) .gallery-emoji {
+    animation-delay: -1s;
+  }
+
+  .treat-card:nth-child(3) .treat-emoji,
+  .event-step:nth-child(3) .event-emoji,
+  .gallery-tile:nth-child(3) .gallery-emoji {
+    animation-delay: -2s;
+  }
+}
+
+@keyframes fur-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px) rotate(-5deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fur-wiggle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes fur-pawpop {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fur-drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(8deg);
+  }
+}
+
+@keyframes fur-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fur-title span,
+  .paw-trail svg,
+  .hero-floats svg,
+  .treat-emoji,
+  .event-emoji,
+  .gallery-emoji,
+  .pack-avatar > span {
+    animation: none;
+  }
+}
+
+/* ---- Varied tinted section panels + accent bars ---- */
+#treats,
+#pack {
+  background: #fdf1ef;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+#gallery {
+  background: #f6f1e3;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+#events {
+  background: #eef5f1;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+#treats h2::after {
+  background: linear-gradient(90deg, var(--color-accent-3), var(--color-accent-2), var(--color-accent));
+}
+
+#gallery h2::after {
+  background: linear-gradient(90deg, var(--color-accent-2), var(--color-accent-4), var(--color-accent));
+}
+
+#events h2::after {
+  background: linear-gradient(90deg, var(--color-accent-4), var(--color-accent), var(--color-accent-3));
+}
+
+#faq h2::after {
+  background: linear-gradient(90deg, var(--color-accent-3), var(--color-accent-4), var(--color-accent-2));
 }
 
 .footer-note {
