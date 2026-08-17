@@ -1,6 +1,8 @@
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
+import FursuitFriendly from './components/FursuitFriendly.jsx'
+import FeaturedTreats from './components/FeaturedTreats.jsx'
 import Portfolio from './components/Portfolio.jsx'
 import Footer from './components/Footer.jsx'
 
@@ -11,6 +13,8 @@ function App() {
       <main>
         <Hero />
         <About />
+        <FursuitFriendly />
+        <FeaturedTreats />
         <Portfolio />
       </main>
       <Footer />

@@ -21,4 +21,27 @@ function PawMark({ size = 28, className = '' }) {
   )
 }
 
+export function PawPrint({ size = 20, className = '' }) {
+  return (
+    <svg
+      className={className}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <g fill="currentColor">
+        <ellipse cx="6" cy="14" rx="2.4" ry="2.8" />
+        <ellipse cx="18" cy="14" rx="2.4" ry="2.8" />
+        <ellipse cx="9.5" cy="8" rx="2.4" ry="2.8" />
+        <ellipse cx="14.5" cy="8" rx="2.4" ry="2.8" />
+        <ellipse cx="12" cy="18" rx="4.2" ry="3.4" />
+      </g>
+    </svg>
+  )
+}
+
 export default PawMark

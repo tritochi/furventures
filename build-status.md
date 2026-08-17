@@ -48,6 +48,7 @@
 - Build type: Portfolio site for a furry-convention-focused F&B business
 - Build shape: Content-led site (confirmed)
 - Direction (2026): furry-convention-focused F&B; placeholder content/contact added; themed visuals planned
+- Enhancement (2026): added Fursuit-Friendly + Signature Treats sections, expanded palette (warm amber + playful plum), paw-print visuals, colorful card/treat tiles, hero gradient
 - Placeholder contact: hello@furventures.example and +60 12-345 6789, labelled "Placeholder"
 - Proof target: Responsive one-page portfolio site deployed on Vercel
 - Stack: Vite 7 + React + plain CSS (fixed from forced v8 upgrade via `npm audit fix --force` — v8 is incompatible with @vitejs/plugin-react)
