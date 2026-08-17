@@ -50,6 +50,7 @@
 - Direction (2026): furry-convention-focused F&B; placeholder content/contact added; themed visuals planned
 - Enhancement 1 (2026): added Fursuit-Friendly + Signature Treats sections, paw-print visuals, colorful card/treat tiles, hero gradient
 - Enhancement 2 (2026): added Gallery, For Event Organizers, and FAQ sections; switched to a warmer 'furrier' palette (cream, espresso brown, caramel gold, paw-pad rose); sticky header
+- Enhancement 3 (2026): even more furry-coded — Meet the Pack characters, paw trails in hero/footer, paw favicon, fur-dot texture, fur microcopy, fur-toned selection + scrollbar, espresso footer band
 - Placeholder contact: hello@furventures.example and +60 12-345 6789, labelled "Placeholder"
 - Proof target: Responsive one-page portfolio site deployed on Vercel
 - Stack: Vite 7 + React + plain CSS (fixed from forced v8 upgrade via `npm audit fix --force` — v8 is incompatible with @vitejs/plugin-react)
