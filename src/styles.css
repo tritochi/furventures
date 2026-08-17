@@ -2,12 +2,13 @@
   /* furventures design tokens (design.md) — warm 'furrier' palette */
   --color-bg: #fbf6ef;          /* warm cream, light and airy */
   --color-surface: #fffdf8;
-  --color-text: #2f231b;        /* deep espresso brown */
+  --color-text: #2a1f18;        /* deep espresso brown */
   --color-text-muted: #6d5c50;  /* warm taupe */
   --color-accent: #9c4b26;      /* burnt sienna / fur brown */
   --color-accent-dark: #833f1f;
   --color-accent-2: #c08a3e;    /* caramel gold */
-  --color-accent-3: #b96a55;    /* dusty rose / paw-pad pink */
+  --color-accent-3: #b15f52;    /* dusty rose / paw-pad pink */
+  --color-ink: #3a2b20;         /* dark espresso for footer band */
   --color-border: #e7dccd;
   --color-support: #f4ead9;     /* warm sand */
   --radius: 14px;
@@ -175,7 +176,12 @@ textarea:focus-visible {
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 5rem 1.5rem;
+  padding: 5.5rem 1.5rem;
+  scroll-margin-top: 90px;      /* keep section titles clear of the sticky header */
+}
+
+.hero {
+  scroll-margin-top: 70px;
 }
 
 .section h2 {
@@ -286,12 +292,52 @@ textarea:focus-visible {
   font-weight: 600;
 }
 
-/* Footer / Contact */
+/* Footer / Contact — dark espresso band */
 .footer {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 5rem 1.5rem 3rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 5.5rem 1.5rem 3rem;
   text-align: center;
+  color: #e9dcc9;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(192, 138, 62, 0.20), transparent 55%),
+    var(--color-ink);
+}
+
+.footer h2 {
+  color: #fff7ec;
+}
+
+.footer .section-lead,
+.footer p,
+.footer .footer-note,
+.footer .contact-meta {
+  color: #d8c7b4;
+}
+
+.footer a {
+  color: #d8a05f;
+}
+
+.footer .field label {
+  color: #fff7ec;
+}
+
+.footer input,
+.footer textarea {
+  background: #fffdf8;
+  color: var(--color-text);
+}
+
+.footer .placeholder-note {
+  color: #cbb89f;
+}
+
+.footer .contact-success {
+  background: #4a3526;
+  border-color: #5c4634;
+  color: #fff7ec;
 }
 
 .contact-form {
@@ -565,6 +611,60 @@ textarea:focus-visible {
 .faq-item p {
   margin: 0.6rem 0 0;
   color: var(--color-text-muted);
+}
+
+/* Hover micro-interactions */
+.gallery-tile,
+.portfolio-grid .card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gallery-tile:hover,
+.portfolio-grid .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 25, 15, 0.10);
+}
+
+/* Subtle entrance + paw 'breathe' animations (respect reduced motion) */
+@media (prefers-reduced-motion: no-preference) {
+  .hero {
+    animation: fur-up 0.7s ease-out both;
+  }
+
+  .hero-mark {
+    animation: fur-breathe 3s ease-in-out infinite;
+  }
+}
+
+@keyframes fur-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fur-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero,
+  .hero-mark {
+    animation: none;
+  }
 }
 
 .footer-note {
