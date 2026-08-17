@@ -3,7 +3,10 @@ import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import FursuitFriendly from './components/FursuitFriendly.jsx'
 import FeaturedTreats from './components/FeaturedTreats.jsx'
+import Gallery from './components/Gallery.jsx'
 import Portfolio from './components/Portfolio.jsx'
+import EventPartners from './components/EventPartners.jsx'
+import Faq from './components/Faq.jsx'
 import Footer from './components/Footer.jsx'
 
 function App() {
@@ -15,7 +18,10 @@ function App() {
         <About />
         <FursuitFriendly />
         <FeaturedTreats />
+        <Gallery />
         <Portfolio />
+        <EventPartners />
+        <Faq />
       </main>
       <Footer />
     </div>

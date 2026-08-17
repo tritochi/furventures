@@ -11,6 +11,8 @@ function Header() {
         <a href="#about">About</a>
         <a href="#treats">Treats</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#events">Events</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
