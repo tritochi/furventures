@@ -2,7 +2,7 @@ const TREATS = [
   { emoji: '🥤', name: 'Frost Paws Lemon Mist', note: 'A frozen citrus cooler' },
   { emoji: '🍫', name: 'Midnight Fur Brownie', note: 'A gooey chocolate square' },
   { emoji: '🥧', name: 'Den Slider Trio', note: 'Three mini savoury sliders' },
-  { emoji: '🍿', name: 'Fur-Pile Popcorn', note: 'Sweet &amp; salty hand-mixed' },
+  { emoji: '🍿', name: 'Fur-Pile Popcorn', note: 'Sweet & salty hand-mixed' },
 ]
 
 function FeaturedTreats() {
