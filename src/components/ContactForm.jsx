@@ -19,6 +19,16 @@ function ContactForm() {
       <div className="contact-success" role="status">
         <h3>Thanks for reaching out!</h3>
         <p>This is a sample response — no message was actually sent.</p>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() => {
+            setForm({ name: '', email: '', message: '' })
+            setSubmitted(false)
+          }}
+        >
+          Send another message
+        </button>
       </div>
     )
   }
@@ -31,6 +41,7 @@ function ContactForm() {
           id="name"
           name="name"
           type="text"
+          autoComplete="name"
           value={form.name}
           onChange={handleChange}
           required
@@ -43,6 +54,7 @@ function ContactForm() {
           id="email"
           name="email"
           type="email"
+          autoComplete="email"
           value={form.email}
           onChange={handleChange}
           required

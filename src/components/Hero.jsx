@@ -23,7 +23,7 @@ function Hero() {
         Suit up for good eats — we feed furry conventions from morning munchies
         to midnight snacks.
       </p>
-      <ul className="hero-flair" aria-hidden="true">
+      <ul className="hero-flair">
         {FLAVOR_CHIPS.map((chip) => (
           <li key={chip}>{chip}</li>
         ))}

@@ -123,6 +123,16 @@ summary:focus-visible {
   background: var(--color-accent-dark);
 }
 
+.btn-secondary {
+  background: transparent;
+  color: #d8a05f;
+  border: 2px solid rgba(216, 160, 95, 0.7);
+}
+
+.btn-secondary:hover {
+  background: rgba(216, 160, 95, 0.15);
+}
+
 /* Hero (first screen) */
 .hero {
   position: relative;
