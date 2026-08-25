@@ -599,6 +599,87 @@ summary:focus-visible {
   height: auto;
 }
 
+/* Animated placeholder "photo" layers */
+.pp-scene,
+.pp-subject,
+.pp-sparkles,
+.pp-chip {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pp-scene {
+    animation: pp-kenburns 14s ease-in-out infinite alternate;
+  }
+
+  .pp-subject {
+    animation: pp-bob 3.4s ease-in-out infinite;
+  }
+
+  .pp-sparkles text {
+    animation: pp-spark 2.8s ease-in-out infinite;
+    opacity: 0.15;
+  }
+
+  .pp-sparkles text:nth-child(2) {
+    animation-delay: -0.8s;
+  }
+
+  .pp-sparkles text:nth-child(3) {
+    animation-delay: -1.5s;
+  }
+
+  .pp-sparkles text:nth-child(4) {
+    animation-delay: -2.1s;
+  }
+
+  .pp-chip {
+    animation: pp-chip 3s ease-in-out infinite;
+  }
+}
+
+@keyframes pp-kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate(-6px, 5px);
+  }
+}
+
+@keyframes pp-bob {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.04);
+  }
+}
+
+@keyframes pp-spark {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translateY(-8px) rotate(18deg);
+  }
+}
+
+@keyframes pp-chip {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 .gallery-tile figcaption {
   font-weight: 600;
   padding: 0.75rem 0.5rem 0.25rem;
@@ -1555,6 +1636,14 @@ html::-webkit-scrollbar-thumb {
   .splash,
   .confetti {
     display: none;
+  }
+
+  .pp-scene,
+  .pp-subject,
+  .pp-sparkles text,
+  .pp-chip {
+    animation: none;
+    opacity: 1;
   }
 
   .marquee,
