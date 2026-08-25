@@ -54,6 +54,7 @@
 - Enhancement 4 (2026): multicolor animated fur-title, colorful multicolor paw favicon, floating paw prints, paw-trail pop, bobbing emojis, tinted section panels, varied accent bars; added mossy-teal accent
 - Enhancement 5 (2026): epic anime/game-style — splash intro (stamp-in + ring + exit), paw confetti burst, animated gradient marquee ticker, hero speed lines + sparkles + "SUIT UP!" pop badge, scroll-in reveals, 3D tilt + colored glow + shine sweep on cards, glowing primary button, footer sparkles; all reduced-motion-guarded
 - Enhancement 6 (2026): animated gallery placeholder "photos" (Ken Burns scene drift, bobbing emoji subject, twinkling sparkles ✦, pulsing label chip) + animated multicolor paw favicon with rotating gold-ring and dark backdrop
+- Enhancement 7 (2026): added cool "ice" secondary palette (Pale Sky #cae5ff, Frosted Blue #acedff, Baby Blue Ice #89bbfe, Glaucous #6f8ab7, Charcoal #615d6c) with a Warm 🌶️ / Cool ❄️ theme toggle in the header; all accent gradients, titles, marquee, glows, hero, footer now theme-aware
 - Placeholder contact: hello@furventures.example and +60 12-345 6789, labelled "Placeholder"
 - Proof target: Responsive one-page portfolio site deployed on Vercel
 - Stack: Vite 7 + React + plain CSS (fixed from forced v8 upgrade via `npm audit fix --force` — v8 is incompatible with @vitejs/plugin-react)
