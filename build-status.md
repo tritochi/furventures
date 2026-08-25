@@ -52,6 +52,7 @@
 - Enhancement 2 (2026): added Gallery, For Event Organizers, and FAQ sections; switched to a warmer 'furrier' palette (cream, espresso brown, caramel gold, paw-pad rose); sticky header
 - Enhancement 3 (2026): even more furry-coded — Meet the Pack characters, paw trails in hero/footer, paw favicon, fur-dot texture, fur microcopy, fur-toned selection + scrollbar, espresso footer band
 - Enhancement 4 (2026): multicolor animated fur-title, colorful multicolor paw favicon, floating paw prints, paw-trail pop, bobbing emojis, tinted section panels, varied accent bars; added mossy-teal accent
+- Enhancement 5 (2026): epic anime/game-style — splash intro (stamp-in + ring + exit), paw confetti burst, animated gradient marquee ticker, hero speed lines + sparkles + "SUIT UP!" pop badge, scroll-in reveals, 3D tilt + colored glow + shine sweep on cards, glowing primary button, footer sparkles; all reduced-motion-guarded
 - Placeholder contact: hello@furventures.example and +60 12-345 6789, labelled "Placeholder"
 - Proof target: Responsive one-page portfolio site deployed on Vercel
 - Stack: Vite 7 + React + plain CSS (fixed from forced v8 upgrade via `npm audit fix --force` — v8 is incompatible with @vitejs/plugin-react)
