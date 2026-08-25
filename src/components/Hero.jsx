@@ -43,6 +43,22 @@ function Hero() {
         <PawPrint size={30} className="float-b" />
         <PawPrint size={16} className="float-c" />
       </div>
+      <div className="hero-speedlines" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+      <div className="hero-sparkles" aria-hidden="true">
+        <span style={{ top: '12%', left: '12%', fontSize: '1.4rem' }}>✨</span>
+        <span style={{ top: '24%', left: '82%', fontSize: '1.1rem', animationDelay: '-0.7s' }}>⭐</span>
+        <span style={{ top: '42%', left: '8%', fontSize: '1rem', animationDelay: '-1.3s' }}>✨</span>
+        <span style={{ top: '70%', left: '88%', fontSize: '1.3rem', animationDelay: '-0.4s' }}>🌟</span>
+        <span style={{ top: '84%', left: '18%', fontSize: '1rem', animationDelay: '-1.8s' }}>✨</span>
+        <span style={{ top: '58%', left: '93%', fontSize: '0.9rem', animationDelay: '-2.2s' }}>⭐</span>
+      </div>
+      <span className="hero-pop" aria-hidden="true">SUIT UP!</span>
     </section>
   )
 }

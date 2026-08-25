@@ -15,6 +15,13 @@ function Footer() {
         <PawPrint size={24} />
         <PawPrint size={16} />
       </div>
+      <div className="footer-sparkles" aria-hidden="true">
+        <span style={{ left: '6%', top: '14%' }}>✨</span>
+        <span style={{ left: '22%', top: '3%', animationDelay: '-0.8s' }}>⭐</span>
+        <span style={{ left: '78%', top: '8%', animationDelay: '-1.4s' }}>✨</span>
+        <span style={{ left: '90%', top: '24%', animationDelay: '-0.4s' }}>🌟</span>
+        <span style={{ left: '48%', top: '4%', animationDelay: '-2s' }}>✨</span>
+      </div>
       <h2>Get in touch</h2>
       <div className="section-body">
         <p>Have a question or want us at your event? Use the form below.</p>
