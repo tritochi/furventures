@@ -1,6 +1,7 @@
 import PawMark from './PawMark.jsx'
 
-function Header() {
+function Header({ theme = 'warm', onToggleTheme }) {
+  const isCool = theme === 'cool'
   return (
     <header className="site-header">
       <a href="#top" className="brand">
@@ -15,6 +16,16 @@ function Header() {
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button
+        type="button"
+        className="theme-toggle"
+        onClick={onToggleTheme}
+        aria-label={isCool ? 'Switch to the warm fur palette' : 'Switch to the cool ice palette'}
+        title={isCool ? 'Warm fur palette' : 'Cool ice palette'}
+      >
+        <span aria-hidden="true">{isCool ? '🌶️' : '❄️'}</span>
+        <span className="theme-toggle-label">{isCool ? 'Warm' : 'Cool'}</span>
+      </button>
     </header>
   )
 }

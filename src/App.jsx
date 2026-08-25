@@ -17,6 +17,12 @@ import ConfettiBurst from './components/ConfettiBurst.jsx'
 function App() {
   const [showSplash, setShowSplash] = useState(true)
   const [showConfetti, setShowConfetti] = useState(true)
+  const [theme, setTheme] = useState('warm')
+
+  // Apply the selected theme to the <html> element (persists for the session).
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
 
   useEffect(() => {
     const splashTimer = setTimeout(() => setShowSplash(false), 2100)
@@ -59,7 +65,10 @@ function App() {
     <div className="app">
       {showSplash && <SplashOverlay />}
       {showConfetti && <ConfettiBurst />}
-      <Header />
+      <Header
+        theme={theme}
+        onToggleTheme={() => setTheme((t) => (t === 'warm' ? 'cool' : 'warm'))}
+      />
       <main>
         <Hero />
         <Marquee />
